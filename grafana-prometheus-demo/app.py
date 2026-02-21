@@ -14,20 +14,20 @@ USER_SIGNUPS = Counter('app_user_signups_total', 'Total user signups')
 def home():
     start = time.time()
     REQUEST_COUNT.labels(method='GET', endpoint='/', status=200).inc()
-    time.sleep(random.uniform(0.1, 0.5))  # Simulate work
+    time.sleep(random.uniform(0.1, 0.5))
     REQUEST_DURATION.observe(time.time() - start)
-    return "Hello, Monitoring World!"
+    return 'Hello, Monitoring World!'
 
 @app.route('/signup', methods=['POST'])
 def signup():
     USER_SIGNUPS.inc()
     REQUEST_COUNT.labels(method='POST', endpoint='/signup', status=201).inc()
-    return "User signed up!", 201
+    return 'User signed up!', 201
 
 @app.route('/error')
 def error():
     REQUEST_COUNT.labels(method='GET', endpoint='/error', status=500).inc()
-    return "Error!", 500
+    return 'Error!', 500
 
 @app.route('/metrics')
 def metrics():
@@ -35,9 +35,3 @@ def metrics():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
-```
-
-Create `requirements.txt`:
-```
-flask
-prometheus-client
