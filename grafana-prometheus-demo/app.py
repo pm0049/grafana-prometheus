@@ -1,11 +1,10 @@
-from flask import Flask, request
-from prometheus_client import Counter, Histogram, generate_latest
+from flask import Flask
+from prometheus_client import Counter, Histogram, generate_latest, CONTENT_TYPE_LATEST
 import time
 import random
 
 app = Flask(__name__)
 
-# Define metrics
 REQUEST_COUNT = Counter('app_requests_total', 'Total requests', ['method', 'endpoint', 'status'])
 REQUEST_DURATION = Histogram('app_request_duration_seconds', 'Request duration')
 USER_SIGNUPS = Counter('app_user_signups_total', 'Total user signups')
@@ -31,7 +30,7 @@ def error():
 
 @app.route('/metrics')
 def metrics():
-    return generate_latest()
+    return generate_latest(), 200, {'Content-Type': CONTENT_TYPE_LATEST}
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
