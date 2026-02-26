@@ -83,9 +83,10 @@ grafana-prometheus-demo/
 ├── requirements.txt        # Python dependencies
 └── README.md              # This file
 
-<img width="1918" height="1026" alt="Image" src="https://github.com/user-attachments/assets/6f2810ce-4620-4d37-b75a-e5e4f033b1b7" />
+
 
 ```
+<img width="1918" height="1026" alt="Image" src="https://github.com/user-attachments/assets/6f2810ce-4620-4d37-b75a-e5e4f033b1b7" />
 
 ## 🔧 Configuration
 
