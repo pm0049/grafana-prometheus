@@ -2,7 +2,7 @@
 
 A hands-on monitoring project demonstrating the fundamentals of Grafana and Prometheus by monitoring a Flask web application with real-time metrics visualization.
 
-![Project Banner](screenshots/grafana-dashboard.png)
+![Project Banner](screenshots/ss1.png)
 
 ---
 
@@ -723,31 +723,31 @@ return generate_latest()  # Wrong - defaults to text/html
 ## 📸 Screenshots
 
 ### 1. Flask Application Home Page
-![Flask App Running](screenshots/flask-app.png)
+![Flask App Running](screenshots/ss1.png)
 *The Flask application responding at localhost:8000*
 
 ---
 
 ### 2. Prometheus Metrics Endpoint
-![Metrics Endpoint](screenshots/metrics-endpoint.png)
+![Metrics Endpoint](screenshots/ss4.png)
 *Raw Prometheus metrics exposed at /metrics endpoint*
 
 ---
 
 ### 3. Prometheus Targets Status
-![Prometheus Targets](screenshots/prometheus-targets.png)
+![Prometheus Targets](screenshots/ss6.png)
 *Prometheus showing flask-app target as UP (green) - successfully scraping metrics*
 
 ---
 
 ### 4. Complete Grafana Dashboard
-![Grafana Dashboard](screenshots/grafana-dashboard.png)
+![Grafana Dashboard](screenshots/ss2.png)
 *Full monitoring dashboard with all panels showing real-time data*
 
 ---
 
 ### 5. Request Rate Time Series
-![Request Rate Graph](screenshots/request-rate.png)
+![Request Rate Graph](screenshots/ss6.png)
 *Request rate per second over time - shows traffic patterns*
 
 ---
@@ -865,64 +865,6 @@ return generate_latest()  # Wrong - defaults to text/html
 - Data-driven decisions
 
 ---
-
-## 🚀 Future Enhancements
-
-### Short Term (Easy)
-
-- [ ] **Add more metrics**:
-  - Memory usage
-  - CPU usage
-  - Disk I/O
-
-- [ ] **Improve dashboard**:
-  - Add more visualization types
-  - Create dashboard variables
-  - Add panel descriptions
-
-- [ ] **Traffic generator improvements**:
-  - Configurable request rates
-  - Different traffic patterns
-  - Spike testing
-
-### Medium Term (Intermediate)
-
-- [ ] **Alerting**:
-  - Configure Prometheus alert rules
-  - Set up Alertmanager
-  - Email/Slack notifications
-
-- [ ] **Database monitoring**:
-  - Add PostgreSQL exporter
-  - Monitor query performance
-  - Track connection pools
-
-- [ ] **Authentication**:
-  - Add Grafana users and roles
-  - Enable Prometheus basic auth
-  - Secure Flask endpoints
-
-### Long Term (Advanced)
-
-- [ ] **Distributed tracing**:
-  - Integrate Jaeger/Zipkin
-  - Add request tracing
-  - Service dependency mapping
-
-- [ ] **Log aggregation**:
-  - Add Loki for logs
-  - Correlate logs with metrics
-  - Centralized log viewing
-
-- [ ] **Production deployment**:
-  - Kubernetes deployment
-  - High availability setup
-  - Long-term storage (Thanos/Cortex)
-
-- [ ] **Advanced monitoring**:
-  - Custom recording rules
-  - Service discovery
-  - Multi-target monitoring
 
 ---
 
