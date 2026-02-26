@@ -2,7 +2,7 @@
 
 A hands-on monitoring project demonstrating the fundamentals of Grafana and Prometheus by monitoring a Flask web application with real-time metrics visualization.
 
-![Project Banner](screenshots/ss1.png)
+![Project Banner](Screenshots/ss1.png)
 
 ---
 
@@ -723,31 +723,31 @@ return generate_latest()  # Wrong - defaults to text/html
 ## 📸 Screenshots
 
 ### 1. Flask Application Home Page
-![Flask App Running](screenshots/ss1.png)
+![Flask App Running](Screenshots/ss1.png)
 *The Flask application responding at localhost:8000*
 
 ---
 
 ### 2. Prometheus Metrics Endpoint
-![Metrics Endpoint](screenshots/ss4.png)
+![Metrics Endpoint](Screenshots/ss4.png)
 *Raw Prometheus metrics exposed at /metrics endpoint*
 
 ---
 
 ### 3. Prometheus Targets Status
-![Prometheus Targets](screenshots/ss6.png)
+![Prometheus Targets](Screenshots/ss6.png)
 *Prometheus showing flask-app target as UP (green) - successfully scraping metrics*
 
 ---
 
 ### 4. Complete Grafana Dashboard
-![Grafana Dashboard](screenshots/ss2.png)
+![Grafana Dashboard](Screenshots/ss2.png)
 *Full monitoring dashboard with all panels showing real-time data*
 
 ---
 
 ### 5. Request Rate Time Series
-![Request Rate Graph](screenshots/ss6.png)
+![Request Rate Graph](Screenshots/ss6.png)
 *Request rate per second over time - shows traffic patterns*
 
 ---
